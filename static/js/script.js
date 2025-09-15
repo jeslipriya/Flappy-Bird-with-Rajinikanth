@@ -93,6 +93,24 @@ let bird = {
     }
 };
 
+const img = new Image();
+img.src = "image/rajini.png";
+
+// For image
+function drawImg() {
+    let scale = 2; // change to 2 for double size
+    let newWidth = bird.width * scale;
+    let newHeight = bird.height * scale;
+    
+    ctx.drawImage(
+        img,
+        bird.x - newWidth / 2,
+        bird.y - newHeight / 2,
+        newWidth,
+        newHeight
+    );
+}
+
 // Pipes array
 let pipes = [];
 
@@ -277,7 +295,8 @@ function gameLoop() {
     
     drawBackground();
     bird.update();
-    bird.draw();
+    // bird.draw(); // when bird
+    drawImg(); // when img
     
     // Update pipe generation timing
     game.timeSinceLastPipe += deltaTime;
@@ -331,4 +350,6 @@ document.addEventListener('keydown', function(e) {
 
 // Initialize canvas
 drawBackground();
-bird.draw();
+// bird.draw(); // if bird needed
+
+drawImg(); // if image needed
