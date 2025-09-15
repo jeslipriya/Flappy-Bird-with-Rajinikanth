@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird - Improved Pillar Spacing</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="score-display">0</div>
+        <div id="level-display">Level: 1</div>
+        <div class="level-up" id="level-up-text">Level Up!</div>
+        
+        <div id="start-screen">
+            <h1>Flappy Bird</h1>
+            <button id="start-button">Start Game</button>
+            <div class="instructions">
+                Click or press Spacebar to flap<br>
+                Avoid the pipes and don't hit the ground
+            </div>
+        </div>
+        
+        <div id="game-over-screen">
+            <h2>Game Over</h2>
+            <p>Your score: <span id="final-score">0</span></p>
+            <p>You reached level: <span id="final-level">1</span></p>
+            <button id="restart-button">Play Again</button>
+        </div>
+        
+        <div class="pipe-info" id="pipe-info">Next pipe in: 0</div>
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
